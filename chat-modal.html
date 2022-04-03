@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Page title</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png">
-    <script src="js/main.js"></script>
-  </head>
-  <body class="antialiased bg-body text-body font-body">
-    <div class="">
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      <section class="relative pt-20 2xl:pt-40 bg-gray-800">
-        <div class="container px-4 mx-auto">
-          <div class="max-w-5xl mx-auto">
-            <div class="flex flex-wrap -mx-4 grid place-items-center">
-              
-              <div class="pb-20 relative w-full grid place-items-center">
-                <div class="max-w-md lg:ml-20">
-                  <form action="#">
-                    <h3 class="mb-10 text-2xl font-bold text-white">Send Me a Message!</h3>
-                    <input class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none" type="email" placeholder="example@shuffle.dev"><input class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none" type="text" placeholder="Subject"><textarea class="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none" name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-                    <button class="py-4 px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Send message</button>
-                  </form>
-                </div>
+
+<head>
+  <title>Inquire Betas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png">
+  <script src="js/main.js"></script>
+</head>
+
+<body class="antialiased bg-body text-body font-body">
+  <div class="">
+    <section class="relative pt-20 2xl:pt-40 bg-gray-800">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex flex-wrap -mx-4 grid place-items-center">
+            <div class="pb-20 relative w-full grid place-items-center">
+              <div class="max-w-md lg:ml-20">
+                <div class="form">
+                  <h3 class="mb-10 text-2xl font-bold text-white">You've been selected as a beta tester!</h3>
+                  <h3 class="mb-2 text-xl font-bold text-white">See the demo <a href="https://clark.inqr.link" class="underline">here</a>!</h3>
+                  <h4 class="text-2xl font-bold text-white">Desired Username</h4>
+                  <input
+                  class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
+                  type="text" placeholder="Username" />
+                  <h4 class="text-2xl font-bold text-white">What Should We Call You?</h4>
+                  <input
+                  class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
+                  type="text" placeholder="First & Last Name" />
+                  <h4 class="text-2xl font-bold text-white">Do You Have a Favorite Photo?</h4>
+                  <input
+                  class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
+                  type="text" placeholder="Photo Link" />
+                  <h4 class="text-2xl font-bold text-white">How Do We Reach You?</h4>
+                  <input
+                    class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
+                    type="email" placeholder="Email" />
+                    <h4 class="text-2xl font-bold text-white">What Links Do You Want To Show Off?</h4>
+                    <textarea
+                    class="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none"
+                    name="links" id="links" cols="30" rows="10" placeholder="Any Links and Titles you want!"></textarea>
+                    <h4 class="text-2xl font-bold text-white">Give Yourself a Good Description.</h4>
+                    <textarea
+                    class="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none"
+                    name="bio" id="bio" cols="30" rows="10" placeholder="All about you here!"></textarea>
+                    <h4 class="text-2xl font-bold text-white">Any Notes For Us?</h4>
+                  <textarea
+                    class="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none"
+                    name="notes" id="notes" cols="30" rows="10" placeholder="Any Notes?"></textarea>
+                    <h4 class="text-2xl font-bold text-white">YOU.Inquire.link or Something Else?</h4>
+                    <select name=”color” class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none">
+                      <option value=”inqr.link”>inqr.link</option>
+                      <option value=”inqr.xyz>inqr.xyz</option>
+                      <option value="inquirel.ink">inquirel.ink</option>
+                      <option value="custom">Custom Domain</option>
+
+                      </select>
+                  <button
+                    class="py-4 px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Request Beta</button>
+                    </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-        
-      
-      
-    </div>
-  </body>
+      </div>
+    </section>
+  </div>
+  <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+</body>
 </html>
-
