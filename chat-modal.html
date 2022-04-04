@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png">
-  <script src="js/main.js"></script>
 </head>
 
 <body class="antialiased bg-body text-body font-body">
@@ -24,46 +23,48 @@
               <div class="max-w-md lg:ml-20">
                 <div class="form">
                   <h3 class="mb-10 text-2xl font-bold text-white">You've been selected as a beta tester!</h3>
-                  <h3 class="mb-2 text-xl font-bold text-white">See the demo <a href="https://clark.inqr.link" class="underline">here</a>!</h3>
+                  <h3 class="mb-2 text-xl font-bold text-white">See the demo <a href="https://clark.inqr.link"
+                      class="underline">here</a>!</h3>
                   <h4 class="text-2xl font-bold text-white">Desired Username</h4>
                   <input
-                  class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
-                  type="text" placeholder="Username" />
+                    class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
+                    type="text" id="username" placeholder="Username" />
                   <h4 class="text-2xl font-bold text-white">What Should We Call You?</h4>
                   <input
-                  class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
-                  type="text" placeholder="First & Last Name" />
+                    class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
+                    type="text" id="flname" placeholder="First & Last Name" />
                   <h4 class="text-2xl font-bold text-white">Do You Have a Favorite Photo?</h4>
                   <input
-                  class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
-                  type="text" placeholder="Photo Link" />
+                    class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
+                    type="text" id="photo" placeholder="Photo Link" />
                   <h4 class="text-2xl font-bold text-white">How Do We Reach You?</h4>
                   <input
                     class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
-                    type="email" placeholder="Email" />
-                    <h4 class="text-2xl font-bold text-white">What Links Do You Want To Show Off?</h4>
-                    <textarea
-                    class="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none"
-                    name="links" id="links" cols="30" rows="10" placeholder="Any Links and Titles you want!"></textarea>
-                    <h4 class="text-2xl font-bold text-white">Give Yourself a Good Description.</h4>
-                    <textarea
-                    class="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none"
-                    name="bio" id="bio" cols="30" rows="10" placeholder="All about you here!"></textarea>
-                    <h4 class="text-2xl font-bold text-white">Any Notes For Us?</h4>
+                    type="email" id="email" placeholder="Email" />
+                  <h4 class="text-2xl font-bold text-white">What Links Do You Want To Show Off?</h4>
                   <textarea
                     class="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none"
-                    name="notes" id="notes" cols="30" rows="10" placeholder="Any Notes?"></textarea>
-                    <h4 class="text-2xl font-bold text-white">YOU.Inquire.link or Something Else?</h4>
-                    <select name=”color” class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none">
-                      <option value=”inqr.link”>inqr.link</option>
-                      <option value=”inqr.xyz>inqr.xyz</option>
-                      <option value="inquirel.ink">inquirel.ink</option>
-                      <option value="custom">Custom Domain</option>
+                    name="links" id="notes" cols="30" rows="10"
+                    placeholder="Any Links and Titles you want + any notes!"></textarea>
+                  <h4 class="text-2xl font-bold text-white">Give Yourself a Good Description.</h4>
+                  <textarea
+                    class="w-full mb-6 px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none"
+                    name="bio" id="bio" cols="30" rows="10" placeholder="All about you here!"></textarea>
+                  <h4 class="text-2xl font-bold text-white">YOU.Inquire.link or Something Else?</h4>
+                  <select name=”link”
+                    class="mb-3 w-full px-12 py-4 bg-white font-bold placeholder-gray-900 rounded-full focus:outline-none"
+                    id="userlink">
+                    <option value=”inqr.link”>inqr.link</option>
+                    <option value=”inqr.xyz>inqr.xyz</option>
+                    <option value="inquirel.ink">inquirel.ink</option>
+                    <option value="custom">Custom Domain</option>
 
-                      </select>
+                  </select>
                   <button
-                    class="py-4 px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Request Beta</button>
-                    </div>
+                    class="py-4 px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+                    onclick="sendBeta()">Request
+                    Beta</button>
+                </div>
               </div>
             </div>
           </div>
@@ -71,9 +72,34 @@
       </div>
     </section>
   </div>
-  <script
-			  src="https://code.jquery.com/jquery-3.6.0.min.js"
-			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    function sendBeta() {
+      var username = $("#username").val(),
+        bname = $("#flname").val(),
+        email = $("#email").val(),
+        bio = $("#bio").val(),
+        photo = $("#photo").val(),
+        notes = $("#notes").val(),
+        username = $("#username").val(),
+        link = $("#userlink").val();
+      $.ajax({
+        type: 'POST',
+        url: 'https://inquire-beta-api.glitch.me/?name=' + bname + "&email=" + email + "&bio=" + bio + "&photo=" + photo + "&notes=" + notes + "&username=" + username + "&link=" + link,
+        success: function (msg) {
+          $(":input").val("");
+          Swal.fire("Thanks for joining our beta " + username + "!");
+          $(function () {
+            setTimeout(function () {
+              window.location.href = "https://www.getinquire.com/";
+            }, 5000);
+          });
+        }
+      });
+    }
+  </script>
 </body>
+
 </html>
